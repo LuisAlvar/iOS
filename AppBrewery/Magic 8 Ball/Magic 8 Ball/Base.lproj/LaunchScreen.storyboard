@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jGc-IX-78I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppBreweryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kf8-SX-2Kc">
+                                <rect key="frame" x="-30" y="0.0" width="453" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppBreweryLogo" translatesAutoresizingMaskIntoConstraints="NO" id="r4X-jg-5tt">
+                                <rect key="frame" x="101.66666666666669" y="396.66666666666669" width="190" height="59"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P4Z-Gj-CId"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kf8-SX-2Kc" firstAttribute="leading" secondItem="jGc-IX-78I" secondAttribute="leading" constant="-30" id="Kpw-Pj-yez"/>
+                            <constraint firstAttribute="bottom" secondItem="kf8-SX-2Kc" secondAttribute="bottom" id="KrZ-Rp-8A5"/>
+                            <constraint firstItem="kf8-SX-2Kc" firstAttribute="top" secondItem="jGc-IX-78I" secondAttribute="top" id="OlB-uL-S9b"/>
+                            <constraint firstItem="kf8-SX-2Kc" firstAttribute="trailing" secondItem="jGc-IX-78I" secondAttribute="trailing" constant="30" id="Xe1-K0-sno"/>
+                            <constraint firstItem="r4X-jg-5tt" firstAttribute="centerY" secondItem="jGc-IX-78I" secondAttribute="centerY" id="YHB-I7-MeT"/>
+                            <constraint firstItem="r4X-jg-5tt" firstAttribute="centerX" secondItem="jGc-IX-78I" secondAttribute="centerX" id="yHp-Y9-H21"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppBreweryBackground" width="596" height="842"/>
+        <image name="AppBreweryLogo" width="190" height="59"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
