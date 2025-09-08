@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,20 +14,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicee_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-N9-39h">
-                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2p5-Ai-Hw3">
-                                <rect key="frame" x="59" y="0.0" width="734" height="372"/>
+                                <rect key="frame" x="0.0" y="118" width="430" height="746"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCb-tw-wLX" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="734" height="123.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="248"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="khs-DH-xpp">
-                                                <rect key="frame" x="269" y="-2.3333333333333286" width="196" height="127.99999999999999"/>
+                                                <rect key="frame" x="117" y="60" width="196" height="128"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -36,10 +36,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxO-U3-cgt" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="124.33333333333334" width="734" height="123.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="249" width="430" height="248"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-SH-lSA">
-                                                <rect key="frame" x="242" y="11.666666666666671" width="250" height="100"/>
+                                                <rect key="frame" x="90" y="74" width="250" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-9R-FVh">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -56,10 +56,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wue-K0-uc1" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="248.66666666666669" width="734" height="123.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="498" width="430" height="248"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3t-h0-jLh">
-                                                <rect key="frame" x="317" y="36.666666666666657" width="100" height="50"/>
+                                                <rect key="frame" x="165" y="99" width="100" height="50"/>
                                                 <color key="backgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ZNQ-y2-gUR"/>
@@ -95,8 +95,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="diceImageView1" destination="Oq3-9R-FVh" id="lHE-MD-0bZ"/>
-                        <outlet property="diceImageView2" destination="suL-nx-Qhc" id="m2a-bp-j14"/>
+                        <outlet property="diceImageView1" destination="Oq3-9R-FVh" id="n1B-Lj-NdR"/>
+                        <outlet property="diceImageView2" destination="suL-nx-Qhc" id="7Y7-yh-5qA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
