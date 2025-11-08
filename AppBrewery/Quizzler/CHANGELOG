@@ -1,0 +1,8 @@
+## CHANGE LOG
+
+### Oct 5, 2025 - Implementation of the MVC design patter to project
+- Move file `Question.swift` to new Model folder
+- Move file `Main.storyboard` to new View folder
+- Move file `ViewContoller.swift` to new Controller folder
+
+
