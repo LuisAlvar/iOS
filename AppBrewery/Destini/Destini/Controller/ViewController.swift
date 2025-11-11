@@ -15,19 +15,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
     
-    let story0: String = "You see a fork in the road."
-    let choice1: String = "Take a left."
-    let choice2: String = "Take a right"
+    var storyBrain = StoryBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyLabel.text = story0
-        choice1Button.setTitle(choice1, for: .normal)
-        choice2Button.setTitle(choice2, for: .normal)
+        updateUI()
     }
 
+    @IBAction func choiceMade(_ sender: UIButton) {
+        let userData: String = sender.currentTitle!
+        var optionsWithDestinations: [String: Int] = [:]
+        
+        optionsWithDestinations[storyBrain.getChoice1Text()] = storyBrain.getChoice1Destination()
+        
+        optionsWithDestinations[storyBrain.getChoice2Text()] = storyBrain.getChoice2Destination()
+        
+        let destination: Int = optionsWithDestinations[userData]!
+        
+        storyBrain.nextStory(destination)
+        
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+    }
     
-    @IBAction func choiceMade(_ sender: Any) {
+    @objc func updateUI()
+    {
+        storyLabel.text = storyBrain.getStoryText()
+        choice1Button.setTitle(storyBrain.getChoice1Text(), for: .normal)
+        choice2Button.setTitle(storyBrain.getChoice2Text(), for: .normal)
     }
     
 }
