@@ -6,38 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		064A3E642EFD02C0001FC0B3 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 064A3E632EFD02BA001FC0B3 /* CHANGELOG.md */; };
-/* End PBXBuildFile section */
+/* Begin PBXCopyFilesBuildPhase section */
+		0644B8352EFF76240021A53A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		064A3E4B2EFCB898001FC0B3 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		064A3E632EFD02BA001FC0B3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		0644B8372EFF76240021A53A /* ClassesDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClassesDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		064A3E5D2EFCB899001FC0B3 /* Exceptions for "Portfolio" folder in "Portfolio" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 064A3E4A2EFCB898001FC0B3 /* Portfolio */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		064A3E4D2EFCB898001FC0B3 /* Portfolio */ = {
+		0644B8392EFF76240021A53A /* ClassesDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				064A3E5D2EFCB899001FC0B3 /* Exceptions for "Portfolio" folder in "Portfolio" target */,
-			);
-			path = Portfolio;
+			path = ClassesDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		064A3E482EFCB898001FC0B3 /* Frameworks */ = {
+		0644B8342EFF76240021A53A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,19 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		064A3E422EFCB898001FC0B3 = {
+		0644B82E2EFF76240021A53A = {
 			isa = PBXGroup;
 			children = (
-				064A3E632EFD02BA001FC0B3 /* CHANGELOG.md */,
-				064A3E4D2EFCB898001FC0B3 /* Portfolio */,
-				064A3E4C2EFCB898001FC0B3 /* Products */,
+				0644B8392EFF76240021A53A /* ClassesDemo */,
+				0644B8382EFF76240021A53A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		064A3E4C2EFCB898001FC0B3 /* Products */ = {
+		0644B8382EFF76240021A53A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				064A3E4B2EFCB898001FC0B3 /* Portfolio.app */,
+				0644B8372EFF76240021A53A /* ClassesDemo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,75 +60,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		064A3E4A2EFCB898001FC0B3 /* Portfolio */ = {
+		0644B8362EFF76240021A53A /* ClassesDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 064A3E5E2EFCB899001FC0B3 /* Build configuration list for PBXNativeTarget "Portfolio" */;
+			buildConfigurationList = 0644B83E2EFF76250021A53A /* Build configuration list for PBXNativeTarget "ClassesDemo" */;
 			buildPhases = (
-				064A3E472EFCB898001FC0B3 /* Sources */,
-				064A3E482EFCB898001FC0B3 /* Frameworks */,
-				064A3E492EFCB898001FC0B3 /* Resources */,
+				0644B8332EFF76240021A53A /* Sources */,
+				0644B8342EFF76240021A53A /* Frameworks */,
+				0644B8352EFF76240021A53A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				064A3E4D2EFCB898001FC0B3 /* Portfolio */,
+				0644B8392EFF76240021A53A /* ClassesDemo */,
 			);
-			name = Portfolio;
+			name = ClassesDemo;
 			packageProductDependencies = (
 			);
-			productName = Portfolio;
-			productReference = 064A3E4B2EFCB898001FC0B3 /* Portfolio.app */;
-			productType = "com.apple.product-type.application";
+			productName = ClassesDemo;
+			productReference = 0644B8372EFF76240021A53A /* ClassesDemo */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		064A3E432EFCB898001FC0B3 /* Project object */ = {
+		0644B82F2EFF76240021A53A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					064A3E4A2EFCB898001FC0B3 = {
+					0644B8362EFF76240021A53A = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = 064A3E462EFCB898001FC0B3 /* Build configuration list for PBXProject "Portfolio" */;
+			buildConfigurationList = 0644B8322EFF76240021A53A /* Build configuration list for PBXProject "ClassesDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 064A3E422EFCB898001FC0B3;
+			mainGroup = 0644B82E2EFF76240021A53A;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 064A3E4C2EFCB898001FC0B3 /* Products */;
+			productRefGroup = 0644B8382EFF76240021A53A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				064A3E4A2EFCB898001FC0B3 /* Portfolio */,
+				0644B8362EFF76240021A53A /* ClassesDemo */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		064A3E492EFCB898001FC0B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				064A3E642EFD02C0001FC0B3 /* CHANGELOG.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		064A3E472EFCB898001FC0B3 /* Sources */ = {
+		0644B8332EFF76240021A53A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,71 +127,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		064A3E5F2EFCB899001FC0B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 799758TJWK;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Portfolio/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luisalvar.Portfolio;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		064A3E602EFCB899001FC0B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 799758TJWK;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Portfolio/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luisalvar.Portfolio;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		064A3E612EFCB899001FC0B3 /* Debug */ = {
+		0644B83C2EFF76250021A53A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,18 +180,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		064A3E622EFCB899001FC0B3 /* Release */ = {
+		0644B83D2EFF76250021A53A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,38 +238,63 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0644B83F2EFF76250021A53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 799758TJWK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0644B8402EFF76250021A53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 799758TJWK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		064A3E462EFCB898001FC0B3 /* Build configuration list for PBXProject "Portfolio" */ = {
+		0644B8322EFF76240021A53A /* Build configuration list for PBXProject "ClassesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				064A3E612EFCB899001FC0B3 /* Debug */,
-				064A3E622EFCB899001FC0B3 /* Release */,
+				0644B83C2EFF76250021A53A /* Debug */,
+				0644B83D2EFF76250021A53A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		064A3E5E2EFCB899001FC0B3 /* Build configuration list for PBXNativeTarget "Portfolio" */ = {
+		0644B83E2EFF76250021A53A /* Build configuration list for PBXNativeTarget "ClassesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				064A3E5F2EFCB899001FC0B3 /* Debug */,
-				064A3E602EFCB899001FC0B3 /* Release */,
+				0644B83F2EFF76250021A53A /* Debug */,
+				0644B8402EFF76250021A53A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 064A3E432EFCB898001FC0B3 /* Project object */;
+	rootObject = 0644B82F2EFF76240021A53A /* Project object */;
 }
