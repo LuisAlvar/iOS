@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 var myOptionals: String?
 myOptionals = "Luis"
 
@@ -54,3 +55,8 @@ let myOptional: MyOptional?
 myOptional = nil
 
 print(myOptional?.property)
+
+
+let amount_data: String = "$12.52"
+print("\(amount_data.dropFirst())")
+
