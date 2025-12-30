@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        amountTextField.delegate = self // until you extend the current class this will work
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -58,12 +60,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        if let amount = amountTextField.text, let amt = Double(amount) {
-            print("Amount: \(amt)")
-            tipCalculator.setAmount(Amount: amt)
-            self.performSegue(withIdentifier: "goToResult", sender: self)
+        print("\(amountTextField.text!)")
+        if (((amountTextField.text?.isEmpty) != nil)) {
+            if let strAmount = amountTextField.text?.dropFirst(), let amount = Double(strAmount) {
+                tipCalculator.setAmount(Amount: amount)
+                self.performSegue(withIdentifier: "goToResult", sender: self)
+            }
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,7 +79,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     /// This is the most widely used method because it wokrs in any layout and doesnt interfeere with other controls.
     @objc func dismissKeyboard() {
         // This tells the entier view hierarchy to resign the first repsonder, which closes the decimal pad.
@@ -84,5 +86,55 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+/// Extending UITextField behavior which
+/// - Keeps the $ locked at the front
+/// - Allows digits
+/// - Allows only one decimal point
+/// - Prevents typing a second decimla
+/// - Works with backspace and editing
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let current = textField.text ?? ""
+        // if the field is empty, insert the $
+        if current.isEmpty {
+            textField.text = "$"
+        }
+        // Prevent deleting the $
+        if range.location == 0 && range.length == 1 {
+            return false
+        }
+        
+        // Build the updated text
+        let updated = (current as NSString).replacingCharacters(in: range, with: string)
+        
+        // Exttrat the numeric part (everything after $)
+        let numeric = updated.dropFirst()
+        
+        // Allow backspace
+        if string.isEmpty {
+            return true
+        }
+        
+        // Allow only digits and decimal point
+        let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
+        if string.rangeOfCharacter(from: allowedCharacters.inverted) != nil {
+            return false
+        }
+
+        // Allow only one decimal point
+        if numeric.filter({$0 == "."}).count > 1 {
+            return false
+        }
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text?.isEmpty ?? true {
+            textField.text = "$"
+        }
+    }
+    
 }
 
