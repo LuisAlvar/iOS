@@ -1,7 +1,6 @@
 protocol AdvancedLifeSupport {
     func performCPR()
 }
-
 class EmergencyCallHandler {
     var delegate: AdvancedLifeSupport?
     
@@ -15,8 +14,6 @@ class EmergencyCallHandler {
         delegate?.performCPR()
     }
 }
-
-
 struct Paramedic: AdvancedLifeSupport {
         
     /// The paramedic on call will pick up the pager
@@ -28,7 +25,6 @@ struct Paramedic: AdvancedLifeSupport {
         print("The paramedic does chest compressions, 30 per second.")
     }
 }
-
 class Doctor: AdvancedLifeSupport {
     init(handler: EmergencyCallHandler)
     {
@@ -43,7 +39,6 @@ class Doctor: AdvancedLifeSupport {
         print("The doctor starts doing diagnostics.")
     }
 }
-
 class Surgeon: Doctor {
     override func performCPR() {
         super.performCPR()
@@ -54,12 +49,8 @@ class Surgeon: Doctor {
         print("The surgeon is ready to perform surgery.")
     }
 }
-
 let emilio = EmergencyCallHandler()
 //let pete = Paramedic(handler: emilio)
 let angela = Surgeon(handler: emilio)
-
 emilio.assessSitutation()
 emilio.medicalEmergency()
-
-
