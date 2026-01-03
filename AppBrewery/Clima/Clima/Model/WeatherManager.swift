@@ -15,16 +15,25 @@ protocol WeatherManagerDelegate {
 
 /// This struct manages the networking of the calling OpenWeatherAPI for any information we require.
 struct WeatherManager {
-    let weatherAPIKey = "4be17d85fb1c2e759e0e95f255463a88"
+    let weatherAPIKey = Bundle.main.object(forInfoDictionaryKey: "WEATHER_API_KEY") as? String ?? ""
     let units: String = "imperial"
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@&units=%@"
+    let weatherURLforCity = "https://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@&units=%@"
+    let weatherURLforCoordinates = "https://api.openweathermap.org/data/2.5/weather?lat=%lf&lon=%lf&appid=%@&units=%@"
+    
     
     var delegate: WeatherManagerDelegate? //Any class that has implemented the required function
     
     /// Data-packaging from our application and perform the API call
     func fetchWeather(cityName: String)
     {
-        let urlString = String(format: weatherURL, cityName, weatherAPIKey, units)
+        let urlString = String(format: weatherURLforCity, cityName, weatherAPIKey, units)
+        print(urlString)
+        performRequest(with: urlString)
+    }
+
+    func fetchWeather(lat: Double, lon: Double)
+    {
+        let urlString = String(format: weatherURLforCoordinates, lat, lon, weatherAPIKey, units)
         print(urlString)
         performRequest(with: urlString)
     }
@@ -73,11 +82,4 @@ struct WeatherManager {
             return nil
         }
     }
-    
-
-
-    
-    
-    
-    
 }

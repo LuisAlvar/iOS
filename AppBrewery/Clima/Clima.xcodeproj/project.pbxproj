@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ADAA27AD231BBFAF00365194 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06173B4A2F08FBDA00DE944C /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAA27B0231BBFAF00365194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +34,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		060473152F067E090056DAF2 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		06173B472F08FB9300DE944C /* Config */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Config; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,21 +53,14 @@
 			children = (
 				ADAA27CD231BC87F00365194 /* README.md */,
 				ADAA27AF231BBFAF00365194 /* Clima */,
-				ADAA27AE231BBFAF00365194 /* Products */,
+				06173B4A2F08FBDA00DE944C /* Clima.app */,
 			);
-			sourceTree = "<group>";
-		};
-		ADAA27AE231BBFAF00365194 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ADAA27AD231BBFAF00365194 /* Clima.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		ADAA27AF231BBFAF00365194 /* Clima */ = {
 			isa = PBXGroup;
 			children = (
+				06173B472F08FB9300DE944C /* Config */,
 				060473152F067E090056DAF2 /* Model */,
 				ADAA27B0231BBFAF00365194 /* AppDelegate.swift */,
 				ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */,
@@ -114,10 +108,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				060473152F067E090056DAF2 /* Model */,
+				06173B472F08FB9300DE944C /* Config */,
 			);
 			name = Clima;
 			productName = Clima;
-			productReference = ADAA27AD231BBFAF00365194 /* Clima.app */;
+			productReference = 06173B4A2F08FBDA00DE944C /* Clima.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +139,7 @@
 				Base,
 			);
 			mainGroup = ADAA27A4231BBFAF00365194;
-			productRefGroup = ADAA27AE231BBFAF00365194 /* Products */;
+			productRefGroup = ADAA27A4231BBFAF00365194;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -252,6 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_PREFIX_HEADER[sdk=*]" = Secrets.debug.xcconfig;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -318,6 +314,8 @@
 		};
 		ADAA27C2231BBFB300365194 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 06173B472F08FB9300DE944C /* Config */;
+			baseConfigurationReferenceRelativePath = Secrets.debug.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
