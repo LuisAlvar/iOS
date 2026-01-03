@@ -10,16 +10,15 @@ import Foundation
 
 /// This struct has acquire the data from an API response, and contains
 /// functionality specific to the how we want to display or perform the data in our app. 
-struct WeatherModel {
-    
+struct WeatherModel: Codable{
     let conditionId: Int
     let cityName: String
     let temperature: Double
-
+    let latitude: Double
+    let longitude: Double
     var temperatureString: String {
         String(format: "%.1f", temperature)
     }
-
     var conditionName: String {
         switch conditionId {
         case 200...232:
@@ -40,4 +39,9 @@ struct WeatherModel {
             return "cloud"
         }
     }
+}
+
+enum WeatherCacheKeys {
+    static let weatherData = "cachedWeatherData"
+    static let weatherTimestamp = "cachedWeatherTimestamp"
 }
