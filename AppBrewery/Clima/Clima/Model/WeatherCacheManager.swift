@@ -31,14 +31,18 @@ class WeatherCacheManager {
     /// Telemetry data for how many misses our cache was unsucessful in not saving us calls to the API service
     private(set) var cacheMisses = 0
     
+    /// Default constructor: we want to make the [String: CachedWeather] data structure
+    /// within cache and have key weatherCacheByCity as a way to retreive it from cache at a later time.
     init() {
         loadCache()
     }
     
+    /// For each new cached WeatherModel we will use the normailzed version of the city name as part of the key
     private func key(for cityName: String) -> String {
         return cityName.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     }
     
+    /// Loading off the [String: CachedWeather] data structure from cache and saving it in our private var cache
     private func loadCache() {
         guard let data = UserDefaults.standard.data(forKey: cacheKey) else { return }
         let decoder = JSONDecoder()
@@ -47,6 +51,7 @@ class WeatherCacheManager {
         }
     }
     
+    /// Saving the cache variable type [String: CachedWeather] data structure in cache
     private func saveCache() {
         let encoder = JSONEncoder()
         if let data = try? encoder.encode(cache) {
@@ -54,11 +59,13 @@ class WeatherCacheManager {
         }
     }
     
+    /// Removing the oldest entered WeatherModel onto the [String: CachedWeather] data structure
     private func evictOldest() {
         guard let oldest = cache.min(by: { $0.value.timestamp < $1.value.timestamp }) else { return }
         cache.removeValue(forKey: oldest.key)
     }
     
+    /// Adding a WeatherModel ont the  [String: CachedWeather] data structure
     func cacheWeatherModel(_ weather: WeatherModel){
         let cityKey = key(for: weather.cityName)
         let cached = CachedWeather(weather: weather, timestamp: Date())
@@ -70,6 +77,7 @@ class WeatherCacheManager {
         saveCache()
     }
     
+    /// Fetch WeatherModel  based on city name if it exists in cache
     func getCachedWeatherModel(for cityName: String) -> WeatherModel? {
         let cityKey = key(for: cityName)
         guard let cached = cache[cityKey] else {
@@ -89,6 +97,7 @@ class WeatherCacheManager {
         return cached.weather
     }
     
+    /// Fetch WeatherModel based on lat and lon if it exists in cache
     func getCachedWeatherModel(lat: Double, lon: Double, tolerance: Double = 0.0001) -> WeatherModel? {
         for(_, cached) in cache {
             let model = cached.weather
@@ -111,6 +120,7 @@ class WeatherCacheManager {
         return nil
     }
     
+    ///  Self explanatory
     func printCacheStats() {
         print("WeatherCache: Hits: \(cacheHits), Misses: \(cacheMisses)")
     }
